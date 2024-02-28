@@ -1,13 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+
 import './index.css';
-import App from './App';
+import Layout from './components/Layout';
+import ErrorPage from './pages/ErrorPage';
 import reportWebVitals from './reportWebVitals';
+
+
+// 연결할 path(주소)와 컴포넌트를 연결하기 위한 설정
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Layout />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "/hello",
+    element: <h2>Hello, React!</h2>
+  }
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
