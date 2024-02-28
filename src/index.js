@@ -4,6 +4,9 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import './index.css';
 import Layout from './components/Layout';
+import ClassComponent from './components/ClassComponent';
+import FunctionalComponent from './components/FunctionalComponent';
+
 import ErrorPage from './pages/ErrorPage';
 import reportWebVitals from './reportWebVitals';
 
@@ -13,11 +16,19 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
-    errorElement: <ErrorPage />
+    errorElement: <ErrorPage />,
   },
   {
     path: "/hello",
     element: <h2>Hello, React!</h2>
+  },
+  {
+    path: "/component/class",
+    element: <ClassComponent />
+  },
+  {
+    path: "/component/functional",
+    element: <FunctionalComponent />
   }
 ]);
 
