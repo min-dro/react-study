@@ -20,10 +20,10 @@ function Layout() {
             <ul>
                 <li>
                     {/* 클래스형 컴포넌트 클릭 시 "/component/class" 경로로 연결 */}
-                    <a href={"/component/1"}>클래스형 컴포넌트</a>
+                    <a href={"/component/class"}>클래스형 컴포넌트</a>
                 </li>
                 <li>
-                    <a href={"/contacts/2"}>함수형 컴포넌트</a>
+                    <a href={"/component/functional"}>함수형 컴포넌트</a>
                 </li>
             </ul>
             <h3>훅 (Hook)</h3>

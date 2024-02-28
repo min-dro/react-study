@@ -6,10 +6,12 @@ import './index.css';
 import Layout from './components/Layout';
 import ClassComponent from './components/ClassComponent';
 import FunctionalComponent from './components/FunctionalComponent';
-
+import UseStateTest from './components/hook/UseStateTest';
 import ErrorPage from './pages/ErrorPage';
 import reportWebVitals from './reportWebVitals';
-
+import UseEffectTest from './components/hook/UseEffectTest';
+import UseContextTest from './components/hook/UseContextTest';
+import UseCallbackTest from './components/hook/UseCallbackTest';
 
 // 연결할 path(주소)와 컴포넌트를 연결하기 위한 설정
 const router = createBrowserRouter([
@@ -29,6 +31,22 @@ const router = createBrowserRouter([
   {
     path: "/component/functional",
     element: <FunctionalComponent />
+  },
+  {
+    path: "/hook/state",
+    element: <UseStateTest />
+  },
+  {
+    path: "/hook/effect",
+    element: <UseEffectTest />
+  },
+  {
+    path: "/hook/context",
+    element: <UseContextTest />
+  },
+  {
+    path: "/hook/callback",
+    element: <UseCallbackTest />
   }
 ]);
 
