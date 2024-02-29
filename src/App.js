@@ -1,24 +1,23 @@
-import logo from './logo.svg';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
+import Layout2 from './components/Layout2';
+import ClassComponent from './components/ClassComponent';
+import FunctionalComponent from './components/FunctionalComponent';
+import UseContextTest from './components/hook/UseContextTest';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href={"/hello"}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        {/* 기본 path(/) 인 경우 연결할 컴포넌트(Layout2) */}
+        <Route path="/" element={<Layout2 />}>
+          <Route path="/component/class" element={<ClassComponent />} />
+          <Route path="/component/funtional"
+          element={<FunctionalComponent />} />
+          <Route path="/hook/context" element={<UseContextTest />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

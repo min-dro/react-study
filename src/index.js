@@ -10,14 +10,22 @@ import UseStateTest from './components/hook/UseStateTest';
 import ErrorPage from './pages/ErrorPage';
 import reportWebVitals from './reportWebVitals';
 import UseEffectTest from './components/hook/UseEffectTest';
+import UseMemoTest from './components/hook/UseMemoTest';
 import UseContextTest from './components/hook/UseContextTest';
 import UseCallbackTest from './components/hook/UseCallbackTest';
+import UseRefTest from './components/hook/UseRefTest';
+import App from './App';
+import Layout2 from './components/Layout2';
+
 
 // 연결할 path(주소)와 컴포넌트를 연결하기 위한 설정
 const router = createBrowserRouter([
   {
+    
+  },
+  {
     path: "/",
-    element: <Layout />,
+    element: <Layout2 />,
     errorElement: <ErrorPage />,
   },
   {
@@ -41,19 +49,28 @@ const router = createBrowserRouter([
     element: <UseEffectTest />
   },
   {
+    path: "/hook/memo",
+    element: <UseMemoTest />
+  },
+  {
     path: "/hook/context",
     element: <UseContextTest />
   },
   {
     path: "/hook/callback",
     element: <UseCallbackTest />
+  },
+  {
+    path: "/hook/dom",
+    element: <UseRefTest />
   }
-]);
+  ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    {/* <RouterProvider router={router} /> */}
+    <App></App>
   </React.StrictMode>
 );
 

@@ -44,6 +44,12 @@ function Layout() {
                     <a href={"/hook/dom"}>특정 DOM 접근 관련 Hook (useRef)</a>
                 </li>
             </ul>
+            <h3>연습페이지</h3>
+            <ul>
+                <li>
+                    
+                </li>
+            </ul>
         </nav>
         <div id="detail"></div>
         </>
