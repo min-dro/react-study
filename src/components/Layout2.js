@@ -4,10 +4,12 @@ export default function Layout2() {
     return (
         <>
             <nav>
-                <NavLink to="/">Home</NavLink>&nbsp;
+                <a href="/">Home</a>&nbsp;
                 <NavLink to="/component/class">클래스 컴포넌트</NavLink>
                 <NavLink to="/component/functional">함수형 컴포넌트</NavLink>
                 <NavLink to="/hook/context">useContext</NavLink>
+                <NavLink to="/adressBook">주소록</NavLink>
+
             </nav>
             <main>
                 <section>
