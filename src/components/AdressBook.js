@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { Button, Table,  } from 'react-bootstrap';
+import { Button, Table, Form } from 'react-bootstrap';
 
 import AdressList from "./AdressList";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -74,7 +74,7 @@ export default function AdressBook() {
                         })
                     }
                 </tbody>
-            </table>
+            </Table>
             <br/><br/>
             <input type="text" placeholder="이름" />
             &nbsp;

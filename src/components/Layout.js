@@ -29,7 +29,7 @@ function Layout() {
             <h3>훅 (Hook)</h3>
             <ul>
                 <li>
-                    <a href={"/hook/state"}>상태 관련 Hook</a>
+                    <a href={"/hook/state"}>상태 관련 Hook (useState)</a>
                 </li>
                 <li>
                     <a href={"/hook/effect"}>랜더링 시점 관련 Hook (useEffect)</a>
@@ -47,7 +47,7 @@ function Layout() {
             <h3>연습페이지</h3>
             <ul>
                 <li>
-                    
+                    <a href={"/practice/countinglts"}>글자 수 세기</a>
                 </li>
             </ul>
         </nav>

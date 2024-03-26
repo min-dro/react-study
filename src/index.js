@@ -3,30 +3,30 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import './index.css';
+import reportWebVitals from './reportWebVitals';
+import ErrorPage from './pages/ErrorPage';
+
 import Layout from './components/Layout';
+import Layout2 from './components/Layout2';
+
 import ClassComponent from './components/ClassComponent';
 import FunctionalComponent from './components/FunctionalComponent';
 import UseStateTest from './components/hook/UseStateTest';
-import ErrorPage from './pages/ErrorPage';
-import reportWebVitals from './reportWebVitals';
 import UseEffectTest from './components/hook/UseEffectTest';
+import CountingLetters from './components/practice/CountingLetters';
 import UseMemoTest from './components/hook/UseMemoTest';
 import UseContextTest from './components/hook/UseContextTest';
 import UseCallbackTest from './components/hook/UseCallbackTest';
 import UseRefTest from './components/hook/UseRefTest';
 import App from './App';
-import Layout2 from './components/Layout2';
 
 
 // 연결할 path(주소)와 컴포넌트를 연결하기 위한 설정
 const router = createBrowserRouter([
   {
-    
-  },
-  {
     path: "/",
     element: <Layout2 />,
-    errorElement: <ErrorPage />,
+    errorElement: <ErrorPage />
   },
   {
     path: "/hello",
@@ -47,6 +47,10 @@ const router = createBrowserRouter([
   {
     path: "/hook/effect",
     element: <UseEffectTest />
+  },
+  {
+    path: "/practice/countinglts",
+    element: <CountingLetters />
   },
   {
     path: "/hook/memo",
